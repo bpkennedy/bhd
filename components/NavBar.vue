@@ -5,21 +5,30 @@
     w="100%"
     d="flex"
     align-items="center"
-    class="test"
+    :class="{'bottom-nav': bottom }"
   >
-    <c-box px="4">
+    <c-box
+      v-if="!bottom"
+      px="4"
+    >
       <logo />
     </c-box>
-    <c-box flex="1">
-      <c-heading as="h1" size="lg">
+    <c-box
+      v-if="!bottom"
+      flex="1"
+    >
+      <c-heading
+        as="h1"
+        size="lg"
+      >
         Talmid
       </c-heading>
     </c-box>
-    <nav-links />
+    <nav-links :bottom="bottom" />
   </c-box>
 </template>
 
-<script>
+<script lang="js">
 import {
   CBox,
   CHeading,
@@ -34,5 +43,22 @@ export default {
     Logo,
     NavLinks,
   },
+  props: {
+    bottom: {
+      type: Boolean,
+      default: false,
+    },
+  },
 }
 </script>
+
+<style lang="scss">
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #cbd5e0;
+}
+</style>

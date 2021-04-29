@@ -1,5 +1,5 @@
 // Import FontAwesome icons
-import { faBookOpen, faPodcast, faVideo } from '@fortawesome/free-solid-svg-icons'
+import { faBookOpen, faPodcast, faVideo, faHome, faStream, faList, faPlaceOfWorship, faTorah } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -59,6 +59,11 @@ export default {
         faBookOpen,
         faPodcast,
         faVideo,
+        faHome,
+        faStream,
+        faList,
+        faPlaceOfWorship,
+        faTorah,
       },
     },
     extendTheme: {

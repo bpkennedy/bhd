@@ -2,69 +2,56 @@
   <c-box
     d="flex"
     align-items="center"
+    justify-content="space-evenly"
+    width="100%"
+    height="100%"
+    max-width="20rem"
+    mx="4"
+    :class="{'bottom-max-width': bottom }"
   >
-    <c-link
-      px="4"
-      py="1"
-      as="nuxt-link"
-      to="/"
-      rounded="md"
-      :class="{'active': $nuxt.$route.name === 'index' }"
-    >
-      Home
-    </c-link>
-    <c-link
-      px="4"
-      py="1"
-      as="nuxt-link"
-      to="/lists"
-      rounded="md"
-      :class="{'active': $nuxt.$route.name === 'lists' }"
-    >
-      Lists
-    </c-link>
-    <c-link
-      px="4"
-      py="1"
-      as="nuxt-link"
-      to="/times"
-      rounded="md"
-      :class="{'active': $nuxt.$route.name === 'times' }"
-    >
-      Times
-    </c-link>
-    <c-link
-      px="4"
-      py="1"
-      as="nuxt-link"
-      to="/languages"
-      rounded="md"
-      :class="{'active': $nuxt.$route.name === 'languages' }"
-    >
-      Languages
-    </c-link>
+    <nav-link
+      route="/"
+      route-name="index"
+      icon-name="home"
+    />
+    <nav-link
+      route="/lists"
+      route-name="lists"
+      icon-name="stream"
+    />
+    <nav-link
+      route="/times"
+      route-name="times"
+      icon-name="place-of-worship"
+    />
+    <nav-link
+      route="/languages"
+      route-name="languages"
+      icon-name="torah"
+    />
   </c-box>
 </template>
 
-<script>
-import {
-  CBox,
-  CLink,
-} from '@chakra-ui/vue'
+<script lang="js">
+import { CBox } from '@chakra-ui/vue'
+import NavLink from './NavLink.vue'
 
 export default {
   components: {
     CBox,
-    CLink,
+    NavLink,
+  },
+  props: {
+    bottom: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
 
 <style lang="scss">
-@import '../assets/css/main';
-
-.active {
-  background-color: $brand-999;
-  color: $white;
+.bottom-max-width {
+  max-width: 100%;
 }
 </style>

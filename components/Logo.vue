@@ -7,7 +7,7 @@
   />
 </template>
 
-<script>
+<script lang="js">
 import {
   CImage,
 } from '@chakra-ui/vue'

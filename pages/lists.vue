@@ -1,7 +1,20 @@
 <template>
-  <c-box d="flex" flex-direction="column">
-    <c-pseudoBox as="list-filter" pl="4" />
-    <c-box class="card-container">
+  <c-box
+    d="flex"
+    flex-direction="column"
+  >
+    <c-pseudoBox
+      as="list-filter"
+      width="100%"
+      :position="['fixed', 'fixed', 'initial', 'initial', 'initial']"
+      :background="['white', 'white', 'none', 'none', 'none']"
+      :shadow="['md', 'md', 'none', 'none', 'none']"
+      :p="4"
+    />
+    <c-box
+      class="card-container"
+      :mt="[12, 12, 0, 0, 0]"
+    >
       <masonry
         :cols="{default: 4, 1280: 4, 992: 3, 768: 2, 480: 1}"
         :gutter="{default: '1rem', 1280: '1rem', 992: '1.5rem', 768: '2rem'}"

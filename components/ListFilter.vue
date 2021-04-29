@@ -1,6 +1,16 @@
 <template>
-  <c-box>
-    <c-button-group :spacing="2">
+  <c-box display="flex" align-items="center">
+    <c-text
+      as="h2"
+      font-family="EuropaBold"
+      line-height="100%"
+    >
+      Sort:
+    </c-text>
+    <c-button-group
+      :spacing="1"
+      :ml="1"
+    >
       <c-button
         :left-icon="BOOK_ICON"
         variant-color="brand"
@@ -36,7 +46,7 @@
 </template>
 
 <script lang="js">
-import { CBox } from '@chakra-ui/vue'
+import { CBox, CText } from '@chakra-ui/vue'
 import { mapState } from 'vuex'
 import {
   AUDIO_ICON,
@@ -51,6 +61,7 @@ import { LIST_FILTER_SELECTED_ACTION } from '@/store'
 export default {
   components: {
     CBox,
+    CText,
   },
   data () {
     return {

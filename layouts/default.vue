@@ -2,7 +2,10 @@
   <div class="layout">
     <CThemeProvider>
       <CColorModeProvider>
-        <c-box font-family="body" as="main">
+        <c-box
+          font-family="body"
+          as="main"
+        >
           <c-reset />
           <c-box
             d="flex"
@@ -20,8 +23,32 @@
               max-w="74rem"
               flex-dir="column"
             >
-              <nav-bar flex="1" />
+              <CPseudoBox
+                :display="[
+                  'none',
+                  'none',
+                  'block',
+                  'block',
+                  'block',
+                ]"
+                flex="1"
+              >
+                <nav-bar />
+              </CPseudoBox>
               <Nuxt />
+              <CPseudoBox
+                :display="[
+                  'block',
+                  'block',
+                  'none',
+                  'none',
+                  'none',
+                ]"
+                flex="1"
+                mt="12"
+              >
+                <nav-bar :bottom="true" />
+              </CPseudoBox>
             </c-box>
           </c-box>
         </c-box>
@@ -29,12 +56,14 @@
     </CThemeProvider>
   </div>
 </template>
-<script>
+
+<script lang="js">
 import {
   CThemeProvider,
   CColorModeProvider,
   CReset,
   CBox,
+  CPseudoBox,
 } from '@chakra-ui/vue'
 import NavBar from '../components/NavBar.vue'
 
@@ -46,6 +75,7 @@ export default {
     CReset,
     CBox,
     NavBar,
+    CPseudoBox,
   },
 }
 </script>

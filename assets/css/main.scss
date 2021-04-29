@@ -1,0 +1,66 @@
+@import './fonts';
+
+$white: #fff;
+
+$brand-50: rgba(247, 250, 248, 1);
+$brand-100: rgba(229, 240, 234, 1);
+$brand-200: rgba(209, 229, 219, 1);
+$brand-300: rgba(188, 218, 203, 1);
+$brand-400: rgba(165, 205, 185, 1);
+$brand-500: rgba(139, 190, 165, 1);
+$brand-600: rgba(109, 173, 141, 1);
+$brand-700: rgba(74, 152, 113, 1);
+$brand-800: rgba(58, 120, 89, 1);
+$brand-900: rgba(34, 70, 52, 1);
+$brand-999: #4a989a;
+
+$blue-50: #def0ff;
+$blue-100: #afd0ff;
+$blue-300: #4b91ff;
+$blue-500: #0058e6;
+$blue-700: #003182;
+
+$indigo-50: #f2e5ff;
+$indigo-100: #d2b5ff;
+$indigo-200: #b285fa;
+$indigo-300: #9356f7;
+
+$card-gutter: 2rem;
+// chakra breakpoints in pixels
+// 30rem = 480px
+// 48rem = 768px
+// 62rem = 992px
+// 80rem = 1280px
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(
+      farthest-side at bottom left,
+      $brand-200,
+      transparent
+    ),
+    radial-gradient(
+      at top right,
+      $blue-50,
+      transparent 40%
+    ),
+    linear-gradient(
+      to top left,
+      $indigo-50,
+      transparent 85%
+    );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+main {
+  z-index: 1;
+}

@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
 
 jobs:
   ci:
@@ -48,3 +43,19 @@ jobs:
       - name: Run linter 👀
         run: yarn lint
 
+      - name: Ensure can build
+        run: yarn build
+
+      - name: Pull latest on Cloud Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.HOST_USERNAME }}
+          key: ${{ secrets.HOST_PRIVATE_KEY }}
+          script: |
+            rm -rf ./bhs
+            git clone https://github.com/bpkennedy/bhd.git
+            cd bhd
+            yarn install
+            yarn build
+            yarn start

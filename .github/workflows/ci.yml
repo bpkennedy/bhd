@@ -53,7 +53,8 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_PRIVATE_KEY }}
           script: |
-            rm -rf ./bhs
+            rm -rf ./bhd
             git clone https://github.com/bpkennedy/bhd.git
             cd bhd
+            . /etc/profile
             yarn install && yarn build && yarn start

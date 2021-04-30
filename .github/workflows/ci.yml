@@ -53,6 +53,7 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_PRIVATE_KEY }}
           script: |
+            export PATH=$PATH:$HOME/.yarn/bin
             rm -rf ./bhd
             git clone https://github.com/bpkennedy/bhd.git
             cd bhd

@@ -56,6 +56,4 @@ jobs:
             rm -rf ./bhs
             git clone https://github.com/bpkennedy/bhd.git
             cd bhd
-            yarn install
-            yarn build
-            yarn start
+            yarn install && yarn build && yarn start

@@ -14,7 +14,7 @@ import {
 
 export const VIEW_LOADED_ACTION = 'VIEW_LOADED_ACTION'
 export const LIST_FILTER_SELECTED_ACTION = 'LIST_FILTER_SELECTED_ACTION'
-export const SELECTED_BOOK_ACTION = 'SELECTED_BOOK_ACTION'
+export const SELECTED_ITEM_ACTION = 'SELECTED_ITEM_ACTION'
 export const DATA_IS_LOADING_ACTION = 'DATA_IS_LOADING_ACTION'
 export const DATA_DONE_LOADING_ACTION = 'DATA_DONE_LOADING_ACTION'
 
@@ -43,9 +43,9 @@ export const actions = {
     }
     commit(SET_LIST_FILTER_MUTATION, listName)
   },
-  [SELECTED_BOOK_ACTION] ({ commit }, { book, router }) {
-    commit(SET_SELECTED_ITEM_MUTATION, book)
-    router.push(`/books/${book.slug}`)
+  [SELECTED_ITEM_ACTION] ({ commit }, { item, itemType, router }) {
+    commit(SET_SELECTED_ITEM_MUTATION, item)
+    router.push(`/${itemType}/${item.slug}`)
   },
   [DATA_IS_LOADING_ACTION] ({ commit }) {
     commit(SET_LOADING_MUTATION, true)

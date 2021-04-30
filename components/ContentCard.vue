@@ -7,13 +7,13 @@
     rounded="lg"
     bg="white"
     tabindex="0"
-    @click="selectBook"
-    @keypress.enter="selectBook"
+    @click="selectItem"
+    @keypress.enter="selectItem"
   >
     <c-image
       rounded="md"
       w="100%"
-      :src="book.image"
+      :src="contentThumbnail"
     />
     <c-box p="5">
       <c-flex
@@ -26,7 +26,7 @@
           font-weight="bold"
           color="pink.800"
         >
-          {{ book.author }}
+          {{ contentCreator }}
         </c-text>
         <c-badge
           ml="2"
@@ -41,28 +41,56 @@
         font-weight="semibold"
         line-height="short"
       >
-        {{ book.title }}
+        {{ contentTitle }}
       </c-text>
       <c-text mt="2">
-        {{ book.published }}
+        {{ contentDate }}
       </c-text>
     </c-box>
   </c-box>
 </template>
 
-<script lang="js">
-import { SELECTED_BOOK_ACTION } from '@/store'
+<script>
+import { mapState } from 'vuex'
+import { SELECTED_ITEM_ACTION } from '@/store'
 
 export default {
   props: {
-    book: {
+    item: {
       type: Object,
       required: true,
     },
+    itemType: {
+      type: String,
+      required: true,
+    },
+    contentTitle: {
+      type: String,
+      required: true,
+    },
+    contentDate: {
+      type: String,
+      required: true,
+    },
+    contentCreator: {
+      type: String,
+      required: true,
+    },
+    contentThumbnail: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    ...mapState(['listFilter']),
   },
   methods: {
-    selectBook () {
-      this.$store.dispatch(SELECTED_BOOK_ACTION, { book: this.book, router: this.$nuxt.$router })
+    selectItem () {
+      this.$store.dispatch(SELECTED_ITEM_ACTION, {
+        item: this.item,
+        itemType: this.listFilter,
+        router: this.$nuxt.$router,
+      })
     },
   },
 }

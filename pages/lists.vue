@@ -16,13 +16,35 @@
       :mt="[12, 12, 0, 0, 0]"
     >
       <masonry
+        v-if="listFilter === BOOKS_LIST_NAME"
         :cols="{default: 4, 1280: 4, 992: 3, 768: 2, 480: 1}"
         :gutter="{default: '1rem', 1280: '1rem', 992: '1.5rem', 768: '2rem'}"
       >
-        <book-card
+        <content-card
           v-for="book in filteredListItems"
           :key="book.title"
-          :book="book"
+          :item="book"
+          :item-type="BOOKS_LIST_NAME"
+          :content-title="book.title"
+          :content-creator="book.author"
+          :content-date="book.published"
+          :content-thumbnail="book.image"
+        />
+      </masonry>
+      <masonry
+        v-if="listFilter === VIDEOS_LIST_NAME"
+        :cols="{default: 4, 1280: 4, 992: 3, 768: 2, 480: 1}"
+        :gutter="{default: '1rem', 1280: '1rem', 992: '1.5rem', 768: '2rem'}"
+      >
+        <content-card
+          v-for="video in filteredListItems"
+          :key="video.title"
+          :item="video"
+          :item-type="VIDEOS_LIST_NAME"
+          :content-title="video.title"
+          :content-creator="video.creator"
+          :content-date="video.published"
+          :content-thumbnail="video.thumbnailUrl"
         />
       </masonry>
     </c-box>
@@ -31,9 +53,13 @@
 
 <script lang="js">
 import { CBox, CPseudoBox } from '@chakra-ui/vue'
-import { mapGetters } from 'vuex'
-import { LISTS_VIEW_NAME } from '@/constants'
-import BookCard from '../components/BookCard.vue'
+import { mapGetters, mapState } from 'vuex'
+import {
+  LISTS_VIEW_NAME,
+  BOOKS_LIST_NAME,
+  VIDEOS_LIST_NAME,
+} from '@/constants'
+import ContentCard from '../components/ContentCard.vue'
 import ListFilter from '../components/ListFilter.vue'
 import { VIEW_LOADED_ACTION, FILTERED_LIST_ITEMS_GETTER } from '~/store'
 
@@ -41,11 +67,18 @@ export default {
   components: {
     CBox,
     CPseudoBox,
-    BookCard,
+    ContentCard,
     // eslint-disable-next-line vue/no-unused-components
     ListFilter,
   },
+  data () {
+    return {
+      BOOKS_LIST_NAME,
+      VIDEOS_LIST_NAME,
+    }
+  },
   computed: {
+    ...mapState(['listFilter']),
     ...mapGetters({
       filteredListItems: FILTERED_LIST_ITEMS_GETTER,
     }),

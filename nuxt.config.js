@@ -1,4 +1,4 @@
-// Import FontAwesome icons
+import zlib from 'zlib'
 import { faBookOpen, faPodcast, faVideo, faHome, faStream, faList, faPlaceOfWorship, faTorah, faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default {
@@ -14,6 +14,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
   },
+
+  target: 'server',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -35,6 +37,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    // nuxt-compress
+    'nuxt-compress',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -50,6 +54,29 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
+
+  // nuxt-compress for optimal file compression
+  'nuxt-compress': {
+    gzip: {
+      filename: '[path][base].gz',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240,
+      minRatio: 0.8,
+      deleteOriginalAssets: false,
+    },
+    brotli: {
+      filename: '[path][base].br',
+      test: /\.(js|css|html|svg)$/,
+      compressionOptions: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+        },
+      },
+      threshold: 10240,
+      minRatio: 0.8,
+      deleteOriginalAssets: false,
+    },
+  },
 
   // Chakra UI Configuration
   chakra: {

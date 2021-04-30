@@ -56,5 +56,5 @@ jobs:
             rm -rf ./bhd
             git clone https://github.com/bpkennedy/bhd.git
             cd bhd
-            . /etc/profile
+            npm install -g yarn
             yarn install && yarn build && yarn start

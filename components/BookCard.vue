@@ -2,11 +2,13 @@
   <c-box
     :w="['100%']"
     :mt="['1rem', '1rem', '0', '0', '0']"
-    :mb="['2rem', '2rem', '2rem', '2rem', '2rem']"
+    mb="2rem"
     shadow="md"
     rounded="lg"
     bg="white"
     tabindex="0"
+    @click="selectBook"
+    @keypress.enter="selectBook"
   >
     <c-image
       rounded="md"
@@ -49,11 +51,18 @@
 </template>
 
 <script lang="js">
+import { SELECTED_BOOK_ACTION } from '@/store'
+
 export default {
   props: {
     book: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    selectBook () {
+      this.$store.dispatch(SELECTED_BOOK_ACTION, { book: this.book, router: this.$nuxt.$router })
     },
   },
 }

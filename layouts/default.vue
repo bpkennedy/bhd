@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div style="height: 100%;">
     <CThemeProvider>
       <CColorModeProvider>
         <c-box
@@ -7,6 +7,7 @@
           as="main"
         >
           <c-reset />
+          <loader />
           <c-box
             d="flex"
             w="100vw"
@@ -65,6 +66,7 @@ import {
   CBox,
   CPseudoBox,
 } from '@chakra-ui/vue'
+import Loader from '../components/Loader.vue'
 import NavBar from '../components/NavBar.vue'
 
 export default {
@@ -74,16 +76,9 @@ export default {
     CColorModeProvider,
     CReset,
     CBox,
-    NavBar,
     CPseudoBox,
+    NavBar,
+    Loader,
   },
 }
 </script>
-
-<style lang="scss">
-@import '../assets/css/main';
-
-.layout {
-  height: 100%;
-}
-</style>

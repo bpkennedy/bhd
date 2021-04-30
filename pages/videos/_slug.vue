@@ -32,7 +32,7 @@
       <vue-plyr>
         <div class="plyr__video-embed">
           <iframe
-            :src="`${loadedItem.videoUrl}?amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`"
+            :src="`${loadedItem.mediaUrl}?amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`"
             allowfullscreen
             allowtransparency
             allow="autoplay"
@@ -114,13 +114,6 @@ export default {
 .slug {
   background: white;
   position: relative;
-}
-
-.legible-text {
-  color: black;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
 }
 
 .back-icon-position {

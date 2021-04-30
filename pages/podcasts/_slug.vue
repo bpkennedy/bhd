@@ -27,64 +27,50 @@
     <c-image
       width="100%"
       :height="['14rem', '14rem', '14rem', '14rem', '14rem']"
+      :mt="['4rem', '4rem', '0', '0', '0']"
       size="100%"
-      object-fit="cover"
+      object-fit="contain"
       :src="loadedItem.thumbnailUrl"
-      class="blur-image"
     />
     <c-box
-      class="book-snippet"
-      z-index="2"
-      display="flex"
+      px="10%"
+      width="100%"
     >
-      <c-image
-        width="auto"
-        height="12rem"
-        size="100%"
-        object-fit="contain"
-        border="4px solid white"
-        rounded="lg"
-        ml="4"
-        :src="loadedItem.thumbnailUrl"
-      />
-      <c-box px="2">
-        <c-text
-          as="h1"
-          font-family="EuropaBold"
-          font-size="2xl"
-          mb="1"
-          class="legible-text"
-        >
-          {{ loadedItem.title }}
-        </c-text>
-      </c-box>
+      <vue-plyr>
+        <audio controls playsinline>
+          <source
+            :src="loadedItem.mediaUrl"
+            type="audio/mp3"
+          />
+        </audio>
+      </vue-plyr>
+    </c-box>
+    <c-box
+      width="100%"
+      display="flex"
+      flex-direction="column"
+      justify-content="center"
+      align-items="center"
+    >
+      <c-text
+        as="h1"
+        font-family="EuropaBold"
+        font-size="xl"
+        mb="1"
+      >
+        {{ loadedItem.title }}
+      </c-text>
+      <c-text
+        as="h2"
+        color="purple"
+        font-family="EuropaLight"
+        font-size="lg"
+        mb="1"
+      >
+        {{ loadedItem.seasonTitle }}
+      </c-text>
     </c-box>
     <c-box display="flex" flex-direction="column" p="6" pt="1">
-      <c-box
-        display="flex"
-        justify-content="left"
-        align-items="center"
-        mb="6"
-      >
-        <c-box
-          display="flex"
-          flex-direction="column"
-          justify-content="center"
-          align-items="left"
-        >
-          <c-text
-            as="i"
-            font-size="sm"
-          >
-            {{ loadedItem.creator }}
-          </c-text>
-          <c-text
-            font-size="xs"
-          >
-            {{ loadedItem.published }}
-          </c-text>
-        </c-box>
-      </c-box>
       <c-text
         as="h2"
         font-family="EuropaBold"
@@ -113,7 +99,7 @@
 </template>
 
 <script>
-import { CBox, CText, CImage } from '@chakra-ui/vue'
+import { CBox, CText } from '@chakra-ui/vue'
 import { mapState } from 'vuex'
 import { DATA_IS_LOADING_ACTION, DATA_DONE_LOADING_ACTION } from '@/store'
 
@@ -121,7 +107,6 @@ export default {
   components: {
     CBox,
     CText,
-    CImage,
   },
   asyncData ({ params }) {
     const slug = params.slug
@@ -142,7 +127,7 @@ export default {
     async shortLoadSelectedItem () {
       this.$store.dispatch(DATA_IS_LOADING_ACTION)
       if (!this.selectedItem.title) {
-        this.loadedItem = await this.$content(`/books/${this.slug}`).fetch()
+        this.loadedItem = await this.$content(`/podcasts/${this.slug}`).fetch()
       } else {
         this.loadedItem = this.selectedItem
       }
@@ -156,25 +141,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/css/main.scss';
+
 .slug {
   background: white;
   position: relative;
-}
-
-.blur-image {
-  filter: blur(0.8rem);
-}
-
-.book-snippet {
-  width: 100%;
-  margin-top: -10rem;
-}
-
-.legible-text {
-  color: black;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
 }
 
 .back-icon-position {
@@ -188,6 +159,10 @@ export default {
   border-radius: 50%;
 }
 
+.plyr {
+  width: 100%;
+}
+
 .nuxt-content {
   p {
     display: block;
@@ -199,6 +174,15 @@ export default {
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  a {
+    cursor: pointer;
+    color: $blue-300;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

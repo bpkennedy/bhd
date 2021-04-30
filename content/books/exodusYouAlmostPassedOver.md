@@ -1,8 +1,8 @@
 ---
 title: "The Exodus You Almost Passed Over"
-author: Rabbi David Fohrman
+creator: Rabbi David Fohrman
 synopsis: "Every year we read the story of the Israelites' Exodus from Egypt. It seems like something we already know. But do we? Questions haunt the careful reader. Among them: Doesn't the name "Passover" seem a bit strange? Why not just call it Freedom Day, or Independence Day? And did the Exodus have to be so complicated? Couldn't an All-Powerful deity have teleported the Israelites out of Egypt and spared everyone the arduous process of the Ten Plagues? Then there's the uncomfortable parts of the Exodus: Why, exactly, did God have to harden Pharaoh's heart? Was that really fair?"
-image: https://m.media-amazon.com/images/I/51ge3pVjzgL.jpg
+thumbnailUrl: https://m.media-amazon.com/images/I/51ge3pVjzgL.jpg
 publisher: Aleph Beta Press
 published: April 10, 2016
 pages: 267

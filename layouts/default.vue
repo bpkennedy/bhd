@@ -20,7 +20,7 @@
               flex="1"
               d="flex"
               w="100vw"
-              h="100vh"
+              h="100%"
               max-w="74rem"
               flex-dir="column"
             >
@@ -36,7 +36,7 @@
               >
                 <nav-bar />
               </CPseudoBox>
-              <Nuxt />
+              <Nuxt height="100%" />
               <CPseudoBox
                 :display="[
                   'block',

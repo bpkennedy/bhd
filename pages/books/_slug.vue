@@ -11,7 +11,7 @@
   >
     <c-box
       class="back-icon-position"
-      :top="['0', '0', '5rem', '5rem', '5rem']"
+      top="0"
       p="1.25rem"
       width="4rem"
       z-index="9"
@@ -158,6 +158,7 @@ export default {
 <style lang="scss">
 .slug {
   background: white;
+  position: relative;
 }
 
 .blur-image {

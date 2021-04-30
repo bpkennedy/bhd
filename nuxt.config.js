@@ -137,6 +137,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    // analyze: true,  // enable this to show webpack build analyzer
     transpile: ['vue-masonry'],
   },
 }

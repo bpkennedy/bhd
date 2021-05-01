@@ -48,10 +48,13 @@ jobs:
 
       - name: Pull latest on Cloud Server
         uses: appleboy/ssh-action@master
+        env:
+          NUXT_TELEMETRY_DISABLED: 1
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_PRIVATE_KEY }}
+          envs: NUXT_TELEMETRY_DISABLED
           script: |
             . ~/.nvm/nvm.sh
             . ~/.profile

@@ -7,6 +7,8 @@
     url('~assets/fonts/europa-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
     url('~assets/fonts/europa-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
     url('~assets/fonts/europa-regular-webfont.svg#europaregular') format('svg'); /* Legacy iOS */
+
+  font-display: swap;
 }
 
 @font-face {
@@ -18,6 +20,8 @@
     url('~assets/fonts/europa-regularitalic-webfont.woff') format('woff'), /* Pretty Modern Browsers */
     url('~assets/fonts/europa-regularitalic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
     url('~assets/fonts/europa-regularitalic-webfont.svg#europaregularitalic') format('svg'); /* Legacy iOS */
+
+  font-display: swap;
 }
 
 @font-face {
@@ -29,6 +33,8 @@
     url('~assets/fonts/europa-light-webfont.woff') format('woff'), /* Pretty Modern Browsers */
     url('~assets/fonts/europa-light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
     url('~assets/fonts/europa-light-webfont.svg#europalight') format('svg'); /* Legacy iOS */
+
+  font-display: swap;
 }
 
 @font-face {
@@ -40,6 +46,8 @@
     url('~assets/fonts/europa-lightitalic-webfont.woff') format('woff'), /* Pretty Modern Browsers */
     url('~assets/fonts/europa-lightitalic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
     url('~assets/fonts/europa-lightitalic-webfont.svg#europalightitalic') format('svg'); /* Legacy iOS */
+
+  font-display: swap;
 }
 
 @font-face {
@@ -51,6 +59,8 @@
     url('~assets/fonts/europa-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
     url('~assets/fonts/europa-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
     url('~assets/fonts/europa-bold-webfont.svg#europabold') format('svg'); /* Legacy iOS */
+
+  font-display: swap;
 }
 
 @font-face {
@@ -62,4 +72,6 @@
     url('~assets/fonts/europa-bolditalic-webfont.woff') format('woff'), /* Pretty Modern Browsers */
     url('~assets/fonts/europa-bolditalic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
     url('~assets/fonts/europa-bolditalic-webfont.svg#europabolditalic') format('svg'); /* Legacy iOS */
+
+  font-display: swap;
 }

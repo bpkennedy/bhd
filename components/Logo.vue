@@ -1,20 +1,8 @@
 <template>
-  <c-image
-    h="5rem"
-    w="5rem"
+  <img
+    height="80px"
+    width="80px"
     :src="require('assets/burningHeartLogo.svg')"
     alt="Burning Heart Discipleship Logo"
   />
 </template>
-
-<script lang="js">
-import {
-  CImage,
-} from '@chakra-ui/vue'
-
-export default {
-  components: {
-    CImage,
-  },
-}
-</script>

@@ -4,14 +4,14 @@ import { faBookOpen, faPodcast, faVideo, faHome, faStream, faList, faPlaceOfWors
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'burning-heart',
+    title: 'Talmid',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Spiritual formation and practice for becoming People of the Text.' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
     ],
   },
 

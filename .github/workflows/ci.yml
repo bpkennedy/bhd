@@ -61,4 +61,4 @@ jobs:
             git clone https://github.com/bpkennedy/bhd.git
             cd bhd
             chmod 755 ./deploy.sh
-            ./deploy.sh
+            ./deploy.sh &

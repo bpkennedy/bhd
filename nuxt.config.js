@@ -80,9 +80,6 @@ export default {
 
   // Chakra UI Configuration
   chakra: {
-    config: {
-      autoImport: false,
-    },
     icons: {
       // Here we state that we use `fa`
       // icons library for Chakra's

@@ -7,7 +7,9 @@ export default {
     title: 'Talmid',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, viewport-fit=cover, initial-scale=1' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { hid: 'description', name: 'description', content: 'Spiritual formation and practice for becoming People of the Text.' },
     ],
     link: [

@@ -4,6 +4,7 @@
       as="h2"
       font-family="EuropaBold"
       line-height="100%"
+      :color="['black', 'black', 'white', 'white', 'white']"
     >
       Sort:
     </c-text>
@@ -15,8 +16,10 @@
         :left-icon="BOOK_ICON"
         variant-color="brand"
         variant="outline"
+        :color="['black', 'black', 'white', 'white', 'white']"
+        :_hover="{ background: '#f1f1f1', color: '#000' }"
         size="sm"
-        :class="{'active': listFilter === BOOKS_LIST_NAME }"
+        :class="{'filter-active': listFilter === BOOKS_LIST_NAME }"
         @click="handleFilterClick(BOOKS_LIST_NAME)"
       >
         Books
@@ -25,8 +28,10 @@
         :left-icon="AUDIO_ICON"
         variant-color="brand"
         variant="outline"
+        :color="['black', 'black', 'white', 'white', 'white']"
+        :_hover="{ background: '#f1f1f1', color: '#000' }"
         size="sm"
-        :class="{'active': listFilter === PODCASTS_LIST_NAME }"
+        :class="{'filter-active': listFilter === PODCASTS_LIST_NAME }"
         @click="handleFilterClick(PODCASTS_LIST_NAME)"
       >
         Podcasts
@@ -35,8 +40,10 @@
         :left-icon="VIDEO_ICON"
         variant-color="brand"
         variant="outline"
+        :color="['black', 'black', 'white', 'white', 'white']"
+        :_hover="{ background: '#f1f1f1', color: '#000' }"
         size="sm"
-        :class="{'active': listFilter === VIDEOS_LIST_NAME }"
+        :class="{'filter-active': listFilter === VIDEOS_LIST_NAME }"
         @click="handleFilterClick(VIDEOS_LIST_NAME)"
       >
         Videos
@@ -83,3 +90,10 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.filter-active {
+  color: #fff;
+  background: #000;
+}
+</style>

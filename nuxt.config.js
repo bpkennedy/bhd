@@ -105,6 +105,7 @@ export default {
       colors: {
         brand: {
           // 50: '#f7faf8',
+          0: '#ffffff',
           50: '#DEF5F6',
           100: '#e5f0ea',
           200: '#d1e5db',

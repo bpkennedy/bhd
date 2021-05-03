@@ -16,8 +16,11 @@ $brand-999: #4a989a;
 
 $blue-50: #def0ff;
 $blue-100: #afd0ff;
+$blue-200: #7db1ff;
 $blue-300: #4b91ff;
+$blue-400: #1a72ff;
 $blue-500: #0058e6;
+$blue-600: #0045b4;
 $blue-700: #003182;
 
 $indigo-50: #f2e5ff;
@@ -40,27 +43,13 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background:
-    radial-gradient(
-      farthest-side at bottom left,
-      $brand-200,
-      transparent
-    ),
-    radial-gradient(
-      at top right,
-      $blue-50,
-      transparent 40%
-    ),
-    linear-gradient(
-      to top left,
-      $indigo-50,
-      transparent 85%
-    );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   z-index: 0;
 }
 
 main {
   z-index: 1;
+}
+
+.active {
+  color: $brand-999;
 }

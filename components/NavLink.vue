@@ -41,11 +41,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-@import '../assets/css/main';
-
-.active {
-  color: $brand-999;
-}
-</style>

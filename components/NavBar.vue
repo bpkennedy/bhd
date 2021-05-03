@@ -17,12 +17,19 @@
       v-if="!bottom"
       flex="1"
     >
-      <c-heading
-        as="h1"
-        size="lg"
-      >
-        Talmid
-      </c-heading>
+      <c-stack>
+        <c-heading
+          as="h1"
+          size="lg"
+          m="0"
+          p="0"
+        >
+          Burning Heart
+        </c-heading>
+        <c-text font-family="EuropaLightItalic" color="purple">
+          Discipleship
+        </c-text>
+      </c-stack>
     </c-box>
     <nav-links :bottom="bottom" />
   </c-box>
@@ -32,6 +39,8 @@
 import {
   CBox,
   CHeading,
+  CText,
+  CStack,
 } from '@chakra-ui/vue'
 import Logo from './Logo.vue'
 import NavLinks from './NavLinks.vue'
@@ -40,6 +49,8 @@ export default {
   components: {
     CBox,
     CHeading,
+    CText,
+    CStack,
     Logo,
     NavLinks,
   },

@@ -52,6 +52,7 @@
               </CPseudoBox>
             </c-box>
           </c-box>
+          <background />
         </c-box>
       </CColorModeProvider>
     </CThemeProvider>
@@ -68,6 +69,7 @@ import {
 } from '@chakra-ui/vue'
 import Loader from '../components/Loader.vue'
 import NavBar from '../components/NavBar.vue'
+import Background from '../components/Background.vue'
 
 export default {
   name: 'App',
@@ -79,6 +81,7 @@ export default {
     CPseudoBox,
     NavBar,
     Loader,
+    Background,
   },
 }
 </script>

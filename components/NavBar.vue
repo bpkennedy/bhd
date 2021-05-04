@@ -18,14 +18,15 @@
       flex="1"
     >
       <c-stack>
-        <c-heading
+        <c-text
           as="h1"
+          font-size="2xl"
+          font-family="EuropaBold"
           size="lg"
-          m="0"
-          p="0"
+          class="no-space h1-line-height"
         >
           Burning Heart
-        </c-heading>
+        </c-text>
         <c-text font-family="EuropaLightItalic" color="purple">
           Discipleship
         </c-text>
@@ -38,7 +39,6 @@
 <script lang="js">
 import {
   CBox,
-  CHeading,
   CText,
   CStack,
 } from '@chakra-ui/vue'
@@ -48,7 +48,6 @@ import NavLinks from './NavLinks.vue'
 export default {
   components: {
     CBox,
-    CHeading,
     CText,
     CStack,
     Logo,
@@ -64,6 +63,15 @@ export default {
 </script>
 
 <style lang="scss">
+.h1-line-height {
+  line-height: 1.5rem;
+}
+
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+
 .bottom-nav {
   position: fixed;
   bottom: 0;

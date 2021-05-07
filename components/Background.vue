@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <c-box>
     <div class="background-clip">
       <div class="animated-gradient" />
     </div>
     <c-box class="top-background" :height="['4rem', '4rem', '5rem', '5rem', '5rem']" />
-  </div>
+  </c-box>
 </template>
 
 <script lang="js">
@@ -28,23 +28,23 @@ $blue-3: rgba(0, 107, 179, 1);
 
 .background-clip {
   z-index: -1;
-  width: 120vw;
+  width: 100%;
   height: 80%;
   transform: skewY(-12deg);
   transform-origin: 0;
   position: absolute;
-  top: 5rem;
-  left: -5rem;
+  top: 4rem;
+  left: 0;
   overflow: hidden;
 }
 
 .animated-gradient {
   z-index: -1;
-  width: 100%;
+  width: 130vw;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -5rem;
   background: linear-gradient(-45deg, $blue-1, $blue-3, $indigo-300);
   background-size: 200% 200%;
   overflow: hidden;

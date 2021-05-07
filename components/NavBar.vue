@@ -37,19 +37,11 @@
 </template>
 
 <script lang="js">
-import {
-  CBox,
-  CText,
-  CStack,
-} from '@chakra-ui/vue'
 import Logo from './Logo.vue'
 import NavLinks from './NavLinks.vue'
 
 export default {
   components: {
-    CBox,
-    CText,
-    CStack,
     Logo,
     NavLinks,
   },

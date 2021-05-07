@@ -53,7 +53,6 @@
 </template>
 
 <script lang="js">
-import { CBox, CText } from '@chakra-ui/vue'
 import { mapState } from 'vuex'
 import {
   AUDIO_ICON,
@@ -66,10 +65,6 @@ import {
 import { LIST_FILTER_SELECTED_ACTION } from '@/store'
 
 export default {
-  components: {
-    CBox,
-    CText,
-  },
   data () {
     return {
       BOOK_ICON,

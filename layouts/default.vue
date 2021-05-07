@@ -58,13 +58,6 @@
 </template>
 
 <script lang="js">
-import {
-  CThemeProvider,
-  CColorModeProvider,
-  CReset,
-  CBox,
-  CPseudoBox,
-} from '@chakra-ui/vue'
 import Loader from '../components/Loader.vue'
 import NavBar from '../components/NavBar.vue'
 import Background from '../components/Background.vue'
@@ -72,11 +65,6 @@ import Background from '../components/Background.vue'
 export default {
   name: 'App',
   components: {
-    CThemeProvider,
-    CColorModeProvider,
-    CReset,
-    CBox,
-    CPseudoBox,
     NavBar,
     Loader,
     Background,

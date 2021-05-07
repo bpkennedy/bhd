@@ -113,16 +113,10 @@
 </template>
 
 <script>
-import { CBox, CText, CImage } from '@chakra-ui/vue'
 import { mapState } from 'vuex'
 import { DATA_IS_LOADING_ACTION, DATA_DONE_LOADING_ACTION } from '@/store'
 
 export default {
-  components: {
-    CBox,
-    CText,
-    CImage,
-  },
   asyncData ({ params }) {
     const slug = params.slug
     return { slug }

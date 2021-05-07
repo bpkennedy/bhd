@@ -3,7 +3,7 @@
     d="flex"
     flex-direction="column"
   >
-    <c-pseudoBox
+    <CPseudoBox
       as="list-filter"
       width="100%"
       :position="['fixed', 'fixed', 'initial', 'initial', 'initial']"
@@ -68,7 +68,6 @@
 </template>
 
 <script lang="js">
-import { CBox, CPseudoBox } from '@chakra-ui/vue'
 import { mapGetters, mapState } from 'vuex'
 import {
   LISTS_VIEW_NAME,
@@ -82,8 +81,6 @@ import { VIEW_LOADED_ACTION, FILTERED_LIST_ITEMS_GETTER } from '~/store'
 
 export default {
   components: {
-    CBox,
-    CPseudoBox,
     ContentCard,
     // eslint-disable-next-line vue/no-unused-components
     ListFilter,

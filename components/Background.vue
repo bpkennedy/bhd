@@ -7,18 +7,6 @@
   </c-box>
 </template>
 
-<script lang="js">
-import {
-  CBox,
-} from '@chakra-ui/vue'
-
-export default {
-  components: {
-    CBox,
-  },
-}
-</script>
-
 <style lang="scss">
 @import '../assets/css/main.scss';
 

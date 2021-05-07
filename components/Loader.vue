@@ -21,11 +21,9 @@
 </template>
 
 <script>
-import { CBox } from '@chakra-ui/vue'
 import { mapState } from 'vuex'
 
 export default {
-  components: { CBox },
   computed: {
     ...mapState(['loading']),
   },

@@ -33,12 +33,10 @@
 </template>
 
 <script lang="js">
-import { CBox } from '@chakra-ui/vue'
 import NavLink from './NavLink.vue'
 
 export default {
   components: {
-    CBox,
     NavLink,
   },
   props: {

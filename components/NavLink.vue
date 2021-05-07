@@ -21,10 +21,7 @@
 </template>
 
 <script lang="js">
-import { CLink } from '@chakra-ui/vue'
-
 export default {
-  components: { CLink },
   props: {
     routeName: {
       type: String,

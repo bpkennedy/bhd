@@ -30,12 +30,6 @@
         >
           {{ contentCreator }}
         </c-text>
-        <c-badge
-          ml="2"
-          variant-color="pink"
-        >
-          Plus
-        </c-badge>
       </c-flex>
       <c-text
         mt="2"

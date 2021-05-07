@@ -5,7 +5,7 @@
     justify-content="space-evenly"
     width="100%"
     height="100%"
-    max-width="20rem"
+    :max-width="['100%', '100%', '20rem', '20rem', '20rem']"
     mx="4"
     :class="{'bottom-max-width': bottom }"
   >

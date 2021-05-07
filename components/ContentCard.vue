@@ -12,6 +12,8 @@
   >
     <c-image
       rounded="md"
+      :rounded-bottom-right="0"
+      :rounded-bottom-left="0"
       w="100%"
       :src="contentThumbnail"
     />

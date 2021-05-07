@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100%;">
+  <div>
     <CThemeProvider>
       <CColorModeProvider>
         <c-box
@@ -11,7 +11,6 @@
           <c-box
             d="flex"
             w="100vw"
-            h="100%"
             flex-dir="column"
             justify-content="flex-start"
             align-items="center"
@@ -20,7 +19,6 @@
               flex="1"
               d="flex"
               w="100vw"
-              h="100%"
               max-w="74rem"
               flex-dir="column"
             >
@@ -36,7 +34,7 @@
               >
                 <nav-bar />
               </CPseudoBox>
-              <Nuxt height="100%" />
+              <Nuxt />
               <CPseudoBox
                 :display="[
                   'block',

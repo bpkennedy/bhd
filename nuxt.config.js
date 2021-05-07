@@ -4,7 +4,7 @@ import { faBookOpen, faPodcast, faVideo, faHome, faStream, faList, faPlaceOfWors
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Talmid',
+    title: 'Burning Heart Discipleship',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, viewport-fit=cover, initial-scale=1' },
